@@ -1,54 +1,204 @@
-# BestStocks Crew
+# 📈 Best Stocks - Multi-Agent Stock Research System
 
-Welcome to the BestStocks Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Best Stocks is an AI-powered multi-agent stock analysis and research system built using CrewAI. The project leverages a team of specialized AI agents that collaborate to analyze financial data, evaluate market trends, research companies, and identify promising stock investment opportunities.
 
-## Installation
+By combining agentic workflows with Large Language Models (LLMs), Best Stocks automates the research process and generates structured investment insights that can assist investors, analysts, and financial enthusiasts in making informed decisions.
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+---
 
-First, if you haven't already, install uv:
+## 🚀 Features
 
-```bash
-pip install uv
+* Multi-agent stock research workflow
+* Automated financial analysis
+* Company and market trend evaluation
+* Collaborative agent decision-making
+* Structured investment reports
+* Modular CrewAI architecture
+* Easy customization through YAML configurations
+
+---
+
+## 🛠️ Tech Stack
+
+* Python 3.10+
+* CrewAI
+* Gemini API (Google Generative AI)
+* UV Package Manager
+* YAML Configuration
+* Agentic AI Workflows
+
+---
+
+## 📂 Project Structure
+
+```text
+best_stocks/
+│
+├── src/
+│   └── best_stocks/
+│       ├── config/
+│       │   ├── agents.yaml
+│       │   └── tasks.yaml
+│       ├── crew.py
+│       └── main.py
+│
+├── .env
+├── pyproject.toml
+├── README.md
+└── report.md
 ```
 
-Next, navigate to your project directory and install the dependencies:
+---
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+## ⚙️ Prerequisites
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+Before running the project, make sure you have:
 
-- Modify `src/best_stocks/config/agents.yaml` to define your agents
-- Modify `src/best_stocks/config/tasks.yaml` to define your tasks
-- Modify `src/best_stocks/crew.py` to add your own logic, tools and specific args
-- Modify `src/best_stocks/main.py` to add custom inputs for your agents and tasks
+* Python >= 3.10 and < 3.14
+* Git installed
+* Gemini API Key
 
-## Running the Project
+---
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+## 🔧 Installation
+
+### 1. Clone the Repository
 
 ```bash
-$ crewai run
+git clone https://github.com/YOUR_USERNAME/best_stocks.git
+
+cd best_stocks
 ```
 
-This command initializes the best_stocks Crew, assembling the agents and assigning them tasks as defined in your configuration.
+### 2. Create a Virtual Environment
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+```bash
+uv venv
+```
 
-## Understanding Your Crew
+Activate the environment:
 
-The best_stocks Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+#### Windows
 
-## Support
+```bash
+.venv\Scripts\activate
+```
 
-For support, questions, or feedback regarding the BestStocks Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+#### Linux / macOS
 
-Let's create wonders together with the power and simplicity of crewAI.
+```bash
+source .venv/bin/activate
+```
+
+### 3. Install CrewAI
+
+```bash
+uv pip install crewai
+```
+
+### 4. Install Gemini Support
+
+```bash
+uv add "crewai[google-genai]"
+```
+
+### 5. Install Project Dependencies
+
+```bash
+uv sync
+```
+
+### 6. Configure Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+---
+
+## ▶️ Run the Project
+
+Start the CrewAI workflow:
+
+```bash
+crewai run
+```
+
+The agents will collaborate to perform stock research and generate investment insights based on the configured tasks and workflows.
+
+---
+
+## 🧩 Customization
+
+### Agents Configuration
+
+Edit:
+
+```text
+src/best_stocks/config/agents.yaml
+```
+
+to define agent roles, goals, and capabilities.
+
+### Tasks Configuration
+
+Edit:
+
+```text
+src/best_stocks/config/tasks.yaml
+```
+
+to customize research and analysis tasks.
+
+### Crew Logic
+
+Edit:
+
+```text
+src/best_stocks/crew.py
+```
+
+to add tools, workflows, and agent orchestration logic.
+
+### Application Entry Point
+
+Edit:
+
+```text
+src/best_stocks/main.py
+```
+
+to customize inputs and execution behavior.
+
+---
+
+## 📊 Example Use Cases
+
+* Long-term investment research
+* Stock screening and ranking
+* Market trend analysis
+* Financial data summarization
+* Company performance evaluation
+
+---
+
+## 🤝 Contributing
+
+Contributions, improvements, and feature suggestions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is intended for educational and research purposes.
+
+---
+
+### ⭐ If you found this project useful, consider giving the repository a star.
