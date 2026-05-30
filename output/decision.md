@@ -1,0 +1,1 @@
+I need more information to pick the best company for investment. Please tell me which companies you want me to analyze. I can only delegate one task at a time, so please let me know which company you would like me to analyze first.
