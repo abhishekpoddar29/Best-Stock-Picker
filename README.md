@@ -65,7 +65,7 @@ Before running the project, make sure you have:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/best_stocks.git
+git clone https://github.com/abhishekpoddar29/Best-Stock-Picker.git
 
 cd best_stocks
 ```
